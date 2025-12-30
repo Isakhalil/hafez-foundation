@@ -1,0 +1,433 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafez Foundation - Bridging East and West</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --dark-blue: #0A1128;
+            --cream: #F5F1E8;
+            --teal: #2C5F63;
+            --burgundy: #722F37;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--cream);
+            color: var(--dark-blue);
+            line-height: 1.6;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 17, 40, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.5rem 5%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--teal) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><path d="M50 10 L90 50 L50 90 L10 50 Z" fill="none" stroke="rgba(212,175,55,0.1)" stroke-width="2"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: var(--cream);
+            z-index: 1;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            font-weight: 300;
+            letter-spacing: 8px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            font-style: italic;
+            letter-spacing: 2px;
+            color: var(--gold);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 5%;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--dark-blue);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--dark-blue);
+        }
+
+        .mission-box {
+            background: var(--dark-blue);
+            color: var(--cream);
+            padding: 3rem;
+            border-left: 5px solid var(--gold);
+        }
+
+        .mission-box h3 {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .bento-item {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 4px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 3px solid var(--gold);
+        }
+
+        .bento-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .bento-item.large {
+            grid-column: span 2;
+            background: linear-gradient(135deg, var(--teal), var(--burgundy));
+            color: var(--cream);
+        }
+
+        .bento-item h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            color: var(--gold);
+        }
+
+        .bento-item.large h3 {
+            color: var(--gold);
+        }
+
+        .bento-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .bento-item li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .bento-item li:last-child {
+            border-bottom: none;
+        }
+
+        .art-showcase {
+            background: var(--dark-blue);
+            color: var(--cream);
+            padding: 6rem 5%;
+        }
+
+        .art-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+
+        .art-card {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--teal), var(--burgundy));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 1.5rem;
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .art-card::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg"><circle cx="25" cy="25" r="20" fill="none" stroke="rgba(212,175,55,0.2)" stroke-width="1"/></svg>');
+            opacity: 0.3;
+        }
+
+        .art-card:hover {
+            transform: scale(1.05);
+        }
+
+        .art-card.tall {
+            grid-row: span 2;
+        }
+
+        footer {
+            background: var(--dark-blue);
+            color: var(--cream);
+            text-align: center;
+            padding: 3rem 5%;
+        }
+
+        footer p {
+            letter-spacing: 1px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark-blue);
+            padding: 1rem 2.5rem;
+            margin-top: 2rem;
+            text-decoration: none;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            border: 2px solid var(--gold);
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--gold);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-grid,
+            .bento-grid,
+            .art-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bento-item.large {
+                grid-column: span 1;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#art">ART</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>HAFEZ FOUNDATION</h1>
+            <p>Bridging East and West Through Heritage and Understanding</p>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2 class="section-title">OUR MISSION</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Hafez Foundation arose from the recognition that a wide gap exists between how Westerners see the East and how Easterners see the West. Our mission is to bridge that gap by correcting misperceptions on both sides and by cultivating an appreciation for the beauty and significance of Eastern and Western heritages.</p>
+                <br>
+                <p>We desire to take action in safeguarding our heritage before it is lost. Through student-conceived and student-operated initiatives, we preserve works of art, literature, and architecture that represent centuries of cultural wisdom.</p>
+            </div>
+            <div class="mission-box">
+                <h3>OUR VISION</h3>
+                <p>To serve everyone through projects and writings that promote intercultural recognition and respect. We educate young adults across the nation on the beauty and significance of traditional cultural heritage, fostering understanding in both corners of the world.</p>
+                <a href="#projects" class="cta-button">EXPLORE OUR WORK</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2 class="section-title">OUR PROJECTS</h2>
+        <div class="bento-grid">
+            <div class="bento-item large">
+                <h3>EDUCATION & MEDIA</h3>
+                <p style="margin-bottom: 1.5rem;">Tackling errors in education and media through research-driven initiatives and student empowerment.</p>
+                <ul>
+                    <li>Curriculum Decolonization</li>
+                    <li>Refugee and Immigrant Acculturation Project</li>
+                    <li>Eastern Injustices Research Initiative</li>
+                    <li>The Hafez Journal</li>
+                </ul>
+            </div>
+            <div class="bento-item">
+                <h3>CURRICULUM REFORM</h3>
+                <p>Working with educational institutions to present balanced, accurate representations of Eastern heritage and history in academic settings.</p>
+            </div>
+            <div class="bento-item">
+                <h3>REFUGEE SUPPORT</h3>
+                <p>Research and resource-based programs helping refugee and immigrant communities preserve their cultural identity while navigating new environments.</p>
+            </div>
+            <div class="bento-item">
+                <h3>INJUSTICE PROJECT</h3>
+                <p>Documenting and raising awareness about overlooked injustices affecting Eastern communities through investigative research and storytelling.</p>
+            </div>
+            <div class="bento-item">
+                <h3>THE JOURNAL</h3>
+                <p>An online publication providing resources, data, and perspectives on issues surrounding intercultural dialogue and heritage preservation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="art" class="art-showcase">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--cream);">INTERCULTURAL RECOGNITION</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem; color: var(--gold);">
+                Art decolonization and promotion of traditional cultural art forms
+            </p>
+            <div class="art-grid">
+                <div class="art-card tall">
+                    <span>ARCHITECTURE<br>Preservation of historical structures and design principles</span>
+                </div>
+                <div class="art-card">
+                    <span>RUGS<br>Traditional textile arts</span>
+                </div>
+                <div class="art-card">
+                    <span>CALLIGRAPHY<br>Ancient writing forms</span>
+                </div>
+                <div class="art-card">
+                    <span>CERAMICS<br>Pottery and tile work</span>
+                </div>
+                <div class="art-card">
+                    <span>MINIATURE PAINTING<br>Detailed artistic traditions</span>
+                </div>
+                <div class="art-card tall">
+                    <span>GEOMETRIC PATTERNS<br>Mathematical beauty in design</span>
+                </div>
+                <div class="art-card">
+                    <span>METALWORK<br>Craftsmanship and ornamentation</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2 class="section-title">GET INVOLVED</h2>
+        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                Join us in bridging cultures and preserving heritage. Whether you're a student, researcher, artist, or cultural enthusiast, there's a place for you at Hafez Foundation.
+            </p>
+            <a href="#" class="cta-button">CONTACT US</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hafez Foundation. All rights reserved.</p>
+        <p style="margin-top: 1rem; letter-spacing: 2px;">BRIDGING EAST AND WEST</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        let lastScroll = 0;
+        const nav = document.querySelector('nav');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                nav.style.boxShadow = 'none';
+            } else {
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    </script>
+</body>
+</html>
