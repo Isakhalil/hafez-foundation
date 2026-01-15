@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Asian Warriors - Hafez Foundation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --dark-blue: #0A1128;
+            --cream: #F5F1E8;
+            --teal: #2C5F63;
+            --burgundy: #722F37;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--cream);
+            color: var(--dark-blue);
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 17, 40, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.5rem 5%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .article-header {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--teal) 100%);
+            padding: 8rem 5% 4rem;
+            color: var(--cream);
+            text-align: center;
+        }
+
+        .article-header h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .article-meta {
+            color: var(--gold);
+            font-style: italic;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+        }
+
+        .article-content {
+            max-width: 900px;
+            margin: 4rem auto;
+            padding: 0 5%;
+        }
+
+        .article-content h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin: 3rem 0 1.5rem;
+            color: var(--teal);
+            border-left: 4px solid var(--gold);
+            padding-left: 1.5rem;
+        }
+
+        .article-content h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin: 2rem 0 1rem;
+            color: var(--burgundy);
+        }
+
+        .article-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .article-content blockquote {
+            border-left: 4px solid var(--gold);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            background: white;
+            font-style: italic;
+            color: var(--teal);
+        }
+
+        .back-button {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark-blue);
+            padding: 1rem 2.5rem;
+            margin: 3rem 0;
+            text-decoration: none;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            border: 2px solid var(--gold);
+        }
+
+        .back-button:hover {
+            background: transparent;
+            color: var(--gold);
+        }
+
+        .author-box {
+            background: var(--dark-blue);
+            color: var(--cream);
+            padding: 2rem;
+            margin: 3rem 0;
+            border-left: 5px solid var(--gold);
+        }
+
+        .author-box h4 {
+            color: var(--gold);
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .works-cited {
+            background: white;
+            padding: 2rem;
+            margin: 3rem 0;
+            border-left: 4px solid var(--burgundy);
+        }
+
+        .works-cited h3 {
+            color: var(--burgundy);
+            margin-bottom: 1rem;
+        }
+
+        .works-cited p {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            text-align: left;
+            padding-left: 2rem;
+            text-indent: -2rem;
+        }
+
+        footer {
+            background: var(--dark-blue);
+            color: var(--cream);
+            text-align: center;
+            padding: 3rem 5%;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .article-header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .article-content {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="index.html#about">ABOUT</a></li>
+            <li><a href="index.html#projects">PROJECTS</a></li>
+            <li><a href="index.html#art">ART</a></li>
+            <li><a href="index.html#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div class="article-header">
+        <h1>THE ASIAN WARRIORS</h1>
+        <div class="article-meta">Education & Media • Historical Analysis</div>
+    </div>
+
+    <article class="article-content">
+        <a href="index.html#projects" class="back-button">← BACK TO PROJECTS</a>
+
+        <p>
+            The Janissaries and Samurai are both warriors who have participated in many battles. Some notable wars have been the Samurai against the Portuguese Empire when the latter tried to take control of Japan. Similarly, the Janissaries have fought in many wars, ranging from the Battle of Chaldiran to when Mehmed II beat the crusaders of Constantinople with the help of the Janissaries. If the two groups of warriors did not exist, history as we know it would have been completely different. Both military groups fought in so many wars that they got the attention of the Mongols.
+        </p>
+
+        <h2>The Mongolian Threat</h2>
+        <p>
+            The Mongolian army was one of the most fearsome of their time and fought many enemies on many different fronts, including the Turks and Japanese. Not only had the Mongolian army failed to defeat the Japanese army once, but twice had they failed! The western advance of the Mongols was halted when they were finally defeated by the Mamluks in the Battle of Ain Jalut. The Mamluks helped the Kayi tribe, who later became the Ottoman Empire, when they were fighting the Mongols. The Ottoman and Mamluks later became political enemies over land and a war between them lasted for one year. Eventually the Ottomans won because of their Janissary corp.
+        </p>
+
+        <h2>The Janissaries of the Ottoman Empire</h2>
+        <p>
+            The Janissaries were the elite military unit of the Ottoman Empire until 1826. The word Janissary means "new soldier" or "new troop" which is what they were called when they first became part of the Ottoman army in late 14th century. The Janissaries were originally sourced from devşirme, a tribute by which youths were sent from the Christian Balkan province. They were converted to Islam and then drafted into Ottoman service. This unit became the most prominent and powerful of the Ottomans; they were known for their archery and later in the 16th century for their firepower.
+        </p>
+
+        <h3>The Fall of Constantinople</h3>
+        <p>
+            One very important notable battle was the fall of Constantinople later known as Istanbul. This battle was a very political and religious battle between the Islamic Ottoman Empire and the Christian Crusaders who were European invaders in Islamic lands. It was religious because a prophecy from the Islamic Prophet Muhammad said that, "One day Constantinople will be conquered. Great is the commander who will conquer it. Great are his soldiers." This motivated many different Sultans (Muslim rulers) to attempt to conquer Constantinople so that their name would be forever solidified in history and to fulfill the prophecy.
+        </p>
+
+        <blockquote>
+            "One day Constantinople will be conquered. Great is the commander who will conquer it. Great are his soldiers."
+        </blockquote>
+
+        <p>
+            Many times the Ottomans tried to take control over Constantinople and the Golden Horn, but the walls of Constantinople protected them from the Ottomans. Until 1453, the Ottoman Empire and the Janissaries led a 53-day siege. It began on April 6 and ended on May 29, when the Ottomans finally gained control, ending the battle and fulfilling the prophecy.
+        </p>
+
+        <h2>The Samurai of Japan</h2>
+        <p>
+            The Ottoman Empire was founded by Osman, a leader of the Kayi tribe. Before they were an empire, they had many small battles with the Mongols, who descended from northeastern Asia into the Anatolian lands held by the Kayi and allied Turkic tribes. In the far eastern Japanese islands, the Samurai also had fought off the invasion by Mongols. The Samurai emerged as provincial warrior bands during the Kamakura Period. The Samurai existed in Japan until the 1870s, when the Samurai lost their privileges in the Western-influenced, modernizing society of Japan.
+        </p>
+
+        <p>
+            In pre-modern feudal Japan, Samurai were a Japanese warrior caste, known as an aristocratic warrior or bushi. They became a deep social class ingrained due to their military skills and had developed a disciplined cultural image. During the Kamakura Period Kublai Khan decided to invade Japan. This followed a series of Mongol invasions of Korea, which made Korea a vassal state. The Mongolian empire sought for more land to conquer. In 1274 the Mongols invaded Japan and failed. Seven years later in 1281 Kublai Khan came back trying to conquer Japan and reclaim his honor. He failed and never tried again to invade Japan.
+        </p>
+
+        <h2>Cultural and Religious Parallels</h2>
+        <p>
+            Not only had the Turkish Janissaries and Japanese Samurai had a military likeness, they had their own cultural importance, respectively. They both participated in politics and were very powerful in their own government. They also shared a collective understanding of metaphysics and had a minor teaching of mystics. They were taught at a young age the culture's dominant religions. For the Janissaries that meant Islam and its inner dimension, Sufism, and for the Samurai it meant Shinto practices along with Zen Buddhism.
+        </p>
+
+        <p>
+            The Muslim Janissaries and Buddhist Japanese were very devout to their religion, emphasizing honor and nobility, and would die for their ways of life. The Crusaders of Rome and the Portuguese both tried to convert the two Asian groups. In 1543 the Japanese and Portuguese first made contact with each other. In 1548 Francis Xavier, a Jesuit, came with the goal of being a missionary leading many other Portuguese to come until 1641, when Christianity was banned in Japan, which forced the Portuguese to leave. One of the Ottoman's major enemies were the Roman church and their Crusaders. The Crusaders tried many numerous times to influence, invade, and convert the Muslims but usually failed. For as long as the Janissaries participated in combat, Christendom sent them enemies to face, although sometimes they were an ally.
+        </p>
+
+        <h2>Conclusion</h2>
+        <p>
+            Janissaries and Samurai have many cultural and military similarities — they both fought and repelled the Mongols and later the Christian missionaries. Some notable wars have been the Samurai against the Portuguese Empire when they tried to convert Japan to Christianity. When Constantinople fell to the Ottomans by the hands of the Janissaries, the tide of wars changed massively. Not only did they have military importance, but they have also been very important culturally to their society and have made a massive impact on the course of history.
+        </p>
+
+        <div class="works-cited">
+            <h3>Works Cited</h3>
+            <p>"Arrival of a Portuguese Ship (Article)." Khan Academy, Khan Academy, https://www.khanacademy.org/humanities/art-asia/art-japan/edo-period/a/arrival-of-a-portuguese-ship.</p>
+            <p>"Battle of Varna." Wikipedia, Wikimedia Foundation, 19 Feb. 2023, https://en.wikipedia.org/wiki/Battle_of_Varna.</p>
+            <p>Benesch, Oleg. "Comparing Warrior Traditions: How the Janissaries and Samurai Maintained Their Status and Privileges During Centuries of Peace." Comparative Civilizations Review, 2006.</p>
+            <p>"Japan-Portugal Relations (Basic Data)." Ministry of Foreign Affairs of Japan, https://www.mofa.go.jp/region/europe/portugal/data.html.</p>
+            <p>"The Mongol Empire and Divine Winds: The Mongol Invasion of Japan." TheCollector, 4 July 2021, https://www.thecollector.com/the-mongol-empire-and-divine-winds-the-mongol-invasion-of-japan/.</p>
+        </div>
+
+        <div class="author-box">
+            <h4>ABOUT THIS PROJECT</h4>
+            <p>This article is part of the Education & Media initiative at Hafez Foundation, dedicated to exploring the rich military and cultural heritage of Eastern civilizations and correcting misperceptions about these warrior traditions.</p>
+        </div>
+
+        <a href="index.html#projects" class="back-button">← BACK TO PROJECTS</a>
+    </article>
+
+    <footer>
+        <p>&copy; 2024 Hafez Foundation. All rights reserved.</p>
+        <p style="margin-top: 1rem; letter-spacing: 2px;">BRIDGING EAST AND WEST</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.pageYOffset > 0) {
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
+            } else {
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
