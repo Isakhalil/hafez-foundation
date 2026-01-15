@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cats in Islam - Hafez Foundation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold: #D4AF37;
+            --dark-blue: #0A1128;
+            --cream: #F5F1E8;
+            --teal: #2C5F63;
+            --burgundy: #722F37;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background-color: var(--cream);
+            color: var(--dark-blue);
+            line-height: 1.8;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 17, 40, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1.5rem 5%;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        .article-header {
+            background: linear-gradient(135deg, var(--dark-blue) 0%, var(--teal) 100%);
+            padding: 8rem 5% 4rem;
+            color: var(--cream);
+            text-align: center;
+        }
+
+        .article-header h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .article-meta {
+            color: var(--gold);
+            font-style: italic;
+            letter-spacing: 1px;
+            margin-top: 1rem;
+        }
+
+        .article-content {
+            max-width: 900px;
+            margin: 4rem auto;
+            padding: 0 5%;
+        }
+
+        .article-content h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin: 3rem 0 1.5rem;
+            color: var(--teal);
+            border-left: 4px solid var(--gold);
+            padding-left: 1.5rem;
+        }
+
+        .article-content h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin: 2rem 0 1rem;
+            color: var(--burgundy);
+        }
+
+        .article-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .article-content blockquote {
+            border-left: 4px solid var(--gold);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            background: white;
+            font-style: italic;
+            color: var(--teal);
+        }
+
+        .back-button {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark-blue);
+            padding: 1rem 2.5rem;
+            margin: 3rem 0;
+            text-decoration: none;
+            letter-spacing: 2px;
+            transition: all 0.3s;
+            border: 2px solid var(--gold);
+        }
+
+        .back-button:hover {
+            background: transparent;
+            color: var(--gold);
+        }
+
+        .author-box {
+            background: var(--dark-blue);
+            color: var(--cream);
+            padding: 2rem;
+            margin: 3rem 0;
+            border-left: 5px solid var(--gold);
+        }
+
+        .author-box h4 {
+            color: var(--gold);
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .works-cited {
+            background: white;
+            padding: 2rem;
+            margin: 3rem 0;
+            border-left: 4px solid var(--burgundy);
+        }
+
+        .works-cited h3 {
+            color: var(--burgundy);
+            margin-bottom: 1rem;
+        }
+
+        .works-cited p {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            text-align: left;
+            padding-left: 2rem;
+            text-indent: -2rem;
+        }
+
+        footer {
+            background: var(--dark-blue);
+            color: var(--cream);
+            text-align: center;
+            padding: 3rem 5%;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            .article-header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .article-content {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="../index.html#about">ABOUT</a></li>
+            <li><a href="../index.html#projects">PROJECTS</a></li>
+            <li><a href="../index.html#art">ART</a></li>
+            <li><a href="../index.html#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div class="article-header">
+        <h1>CATS IN ISLAM</h1>
+        <div class="article-meta">The Hafez Journal • Cultural Perspectives</div>
+    </div>
+
+    <article class="article-content">
+        <a href="../index.html#projects" class="back-button">← BACK TO PROJECTS</a>
+
+        <p>
+            Throughout history, cats and dogs have had different roles in society. "Cats are known to be ungrateful while dogs are renowned for their loyalty. However, this is not the case in Islamic-Turkish culture, where cats and dogs held a place completely different." In places with goats and sheep, dogs helped herd livestock around the farm and were held to higher importance. In ancient Egypt, long before the advent of Islam, cats were thought of as gods and as protectors of crops from rodents. The religion of Islam has something to say about cats and dogs, too. The Prophet of Islam, Muhammad (blessings and peace be upon him), recognized the spiritual archetype of cats but he also honored dogs with an important social place.
+        </p>
+
+        <h2>Cats as Clean and Sacred Animals</h2>
+        <p>
+            According to many hadith (pronounced ha-deeth, they are the recorded sayings of the Prophet of Islam), Prophet Muhammad prohibited cats from being killed. Why is this? In the Islamic tradition, cats are considered clean animals that remind people of natural cleanliness and are admired because of this and because of their elegant beauty. According to one article, "In Islam, cats are viewed as holy animals. Above all, they are admired for their cleanliness. They are thought to be ritually clean which is why they're allowed to enter homes and even mosques." This quote shows how Islam respects cats' cleanliness and allows them into their places of worship!
+        </p>
+
+        <p>
+            If a cat were to drink from a cup of water, according to the Prophet Muhammad's practice, the water is still clean to be consumed and can still be used for ritual purification called Wudu' (which is a process of washing certain parts of the body with water, with the intention of worship). Muslim prayer is not accepted without this purification. As a KAWA article stated, "That the water from which a cat has drunk can still be used by a believer to perform his ablutions, or that food left by a cat can still be consumed, is because it is a clean animal."
+        </p>
+
+        <h3>Stories of the Prophet and Cats</h3>
+        <p>
+            Prophet Muhammad, who it is told, once found a cat napping on the sleeve of his robe and rather than disturb the cat, he cut off the sleeve so the cat could continue its slumber undisturbed. In another story the prophet said that a woman who kept a cat locked up and failed to feed it until it died, would be punished to hell. Cats are very important because they keep themselves and their areas clean (especially against pests such as rodents), and they remind human beings to act elegantly with dignity.
+        </p>
+
+        <h2>Dogs in Islamic Tradition</h2>
+        <p>
+            In Islam, dogs are thought as ritually impure, unlike cats. As one article wrote, "Dog's saliva is considered to be dirty and if it gets on your clothes you cannot pray in them unless the stain is rinsed off." You can guess that if the dog's saliva nullifies ritual purity, then dogs are not permitted inside mosques and places of Islamic worship. In traditional Islam, the home was considered an extension of the mosque, so people did not keep dogs inside their homes, although they would keep dogs in separate areas to help with jobs such as herding, hunting, and guarding. The dog was more of an outdoor companion and sometimes dogs could be found roaming towns and villages under peoples' collective care.
+        </p>
+
+        <blockquote>
+            "While a man was walking on a road, he became very thirsty. He found a well and went down in it and drank. When he came out, there was a dog panting and eating moist earth out of thirst. The man said: 'This dog is as thirsty as I was.' So, he went down into the well, filled his shoe with water and held it in his mouth until he climbed out. Then, he gave the dog water to drink. Allah accepted his deed and, thus, forgave him."
+        </blockquote>
+
+        <p>
+            They said: "O Messenger of Allah, are we rewarded for taking care of animals?" He said: "There is a reward for (quenching the thirst of) every living creature." Another narration reads: "Allah accepted his deed and, thus, forgave him and admitted him into Paradise."
+        </p>
+
+        <h2>Animals as Reflections of Divine Qualities</h2>
+        <p>
+            In the Islamic tradition, animals have different roles and are recognized for their reflection of Divine qualities in this physical world, such as cats for their agility and cleanliness, dogs for their loyalty and fearlessness, and even spiders for their creativity and discipline. In a famous hadith, a spider's discipline helped protect the Prophet Muhammad and his companion, Abu Bakr, from persecutors who were targeting them in the area. "A spider is told to have saved Muhammad and Abu Bakr by spinning a web over the entrance of the cave in which they hid."
+        </p>
+
+        <h2>Cats in Turkish Culture</h2>
+        <p>
+            Nowadays – as in the past – cats are used by many to hunt pests such as mice and rats, making them the protector of the land. Cats are also seen as companions and loyal animals. According to an old tale, a Turkish prince known as Prince Şerefeddin Efendi was exiled from his homeland after trying to plot a coup, forcing him to live alone in Beirut. While in exile, he befriended a cat who quickly became a lifelong pet and companion. The tale goes that after the prince's death, his cat led the neighbors to Efendi's dead body.
+        </p>
+
+        <p>
+            According to the Daily Sabah, "Cats were fed not only to catch the mice but to befriend children and the elderly. Especially people who see no loyalty from their relatives or friends, or people who have no children, show their love and compassion to the cats." Cats are seen not only as rat killers, but as true friends.
+        </p>
+
+        <h2>Conclusion</h2>
+        <p>
+            Islam is a religion that respects different animals for different reasons. Cats enjoy respect because of their cleanliness, elegance, and kindness – they do these things naturally because it comprises their essence. Cats are very special and even if they are naturally cleaner than dogs (and many other animals), it does not make them better. Dogs are also protected in Islam and often expected to perform responsibilities such as herding, guarding, and hunting. Unlike cats, dogs need training, and unlike cats, they accept the training.
+        </p>
+
+        <p>
+            Cats are not alone in being honored, as other animals are honored in the Islamic tradition such as spiders, and bees (which have a chapter of the Holy Quran named after them), and also cattle, lions, donkey, elephants, camels, monkeys, ants, birds, and locusts. Believe it or not, cats are not mentioned in the Quran, which goes to show that the Islamic tradition is as much based on the Prophet Muhammad and his teachings, as it is centered on the Quran, too!
+        </p>
+
+        <div class="works-cited">
+            <h3>Resources</h3>
+            <p>The Guardian. https://www.theguardian.com</p>
+            <p>Daily Sabah. https://www.dailysabah.com</p>
+            <p>Arab America. https://www.arabamerica.com</p>
+            <p>KAWA News. https://kawa-news.com</p>
+            <p>Wikipedia. https://en.wikipedia.org</p>
+        </div>
+
+        <div class="author-box">
+            <h4>ABOUT THIS PROJECT</h4>
+            <p>This article is part of The Hafez Journal, an online publication providing resources, data, and perspectives on issues surrounding intercultural dialogue and heritage preservation through youth empowerment.</p>
+        </div>
+
+        <a href="../index.html#projects" class="back-button">← BACK TO PROJECTS</a>
+    </article>
+
+    <footer>
+        <p>&copy; 2024 Hafez Foundation. All rights reserved.</p>
+        <p style="margin-top: 1rem; letter-spacing: 2px;">BRIDGING EAST AND WEST</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.pageYOffset > 0) {
+                nav.style.boxShadow = '0 2px 20px rgba(0,0,0,0.3)';
+            } else {
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
