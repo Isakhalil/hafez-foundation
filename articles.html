@@ -82,15 +82,15 @@
       --color-bg:              #141210;
       --color-surface:         #1A1814;
       --color-surface-2:       #1F1D18;
-      --color-surface-offset:  #161410;
+      --color-surface-offset:  #252219;
       --color-surface-dark:    #0E0C0A;
       --color-divider:         #2A2822;
       --color-border:          oklch(from #F4F0E6 l c h / 0.09);
 
       --color-text:            #E8E4DA;
       --color-text-muted:      #8A857E;
-      --color-text-faint:      #4A4742;
-      --color-text-inverse:    #141210;
+      --color-text-faint:      #6D6860;
+      --color-text-inverse:    #E8E4DA;
 
       --color-accent:          #7B9EC7;
       --color-accent-hover:    #9BB5D4;
@@ -108,13 +108,13 @@
         --color-bg:              #141210;
         --color-surface:         #1A1814;
         --color-surface-2:       #1F1D18;
-        --color-surface-offset:  #161410;
+        --color-surface-offset:  #252219;
         --color-divider:         #2A2822;
         --color-border:          oklch(from #F4F0E6 l c h / 0.09);
         --color-text:            #E8E4DA;
         --color-text-muted:      #8A857E;
-        --color-text-faint:      #4A4742;
-        --color-text-inverse:    #141210;
+        --color-text-faint:      #6D6860;
+        --color-text-inverse:    #E8E4DA;
         --color-accent:          #7B9EC7;
         --color-accent-hover:    #9BB5D4;
         --color-brown:           #C4895A;
@@ -1183,6 +1183,12 @@
       .page-header { padding-block: var(--space-12) var(--space-10); }
       .main-content { padding-inline: var(--space-4); }
       .footer-top { grid-template-columns: 1fr; }
+    }
+
+    /* ─── Dark mode: btn-subscribe needs dark text on lighter blue accent ─── */
+    [data-theme="dark"] .btn-subscribe { color: #1A1814; }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme]) .btn-subscribe { color: #1A1814; }
     }
   </style>
 </head>
