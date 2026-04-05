@@ -1,1 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>What We Do — Hafez Foundation</title>
+  <meta name="description" content="The Hafez Foundation's active initiatives: Keeping Our Promise tutoring program for refugees, and community drives providing computers, books, and essential resources." />
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ─────────────────────────────────────────
+       Art direction: Eastern / Islamic editorial
+       Palette:  warm ivory · near-black · deep blue accent · woody brown
+       Typography: Cormorant Garamond (display) + Jost (body)
+       Density: spacious
+    ───────────────────────────────────────── */
+
+    :root {
+      --color-bg:              #F4F0E6;
+      --color-surface:         #F9F6EE;
+      --color-surface-2:       #FDFBF7;
+      --color-surface-offset:  #EDE9DE;
+      --color-surface-offset-2:#E4DFD5;
+      --color-surface-dark:    #1A1714;
+      --color-divider:         #DDD8CC;
+      --color-border:          oklch(from #1A1714 l c h / 0.10);
+
+      --color-text:            #1A1714;
+      --color-text-muted:      #6B6560;
+      --color-text-faint:      #B0ABA5;
+      --color-text-inverse:    #F4F0E6;
+
+      --color-accent:          #1B2A4A;
+      --color-accent-hover:    #0F1E38;
+      --color-brown:           #5C3D1E;
+      --color-gold:            #C8922A;
+
+      --font-display: 'Cormorant Garamond', 'Georgia', serif;
+      --font-body:    'Jost', 'Helvetica Neue', sans-serif;
+
+      --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+      --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+      --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
+      --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
+      --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
+      --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+      --text-3xl:  clamp(2.5rem,   1rem    + 4vw,    5rem);
+
+      --space-1: .25rem; --space-2: .5rem; --space-3: .75rem;
+      --space-4: 1rem;   --space-5: 1.25rem; --space-6: 1.5rem;
+      --space-8: 2rem;   --space-10: 2.5rem; --space-12: 3rem;
+      --space-16: 4rem;  --space-20: 5rem;   --space-24: 6rem;
+
+      --radius-sm: 0.25rem; --radius-md: 0.5rem;
+      --radius-lg: 0.75rem; --radius-xl: 1rem;
+
+      --shadow-sm: 0 1px 3px oklch(0.15 0.02 60 / 0.07);
+      --shadow-md: 0 4px 16px oklch(0.15 0.02 60 / 0.09);
+      --shadow-lg: 0 12px 40px oklch(0.15 0.02 60 / 0.13);
+
+      --content-narrow:  640px;
+      --content-default: 960px;
+      --content-wide:   1280px;
+      --transition: 200ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    [data-theme="dark"] {
+      --color-bg:              #141210;
+      --color-surface:         #1A1814;
+      --color-surface-2:       #1F1D18;
+      --color-surface-offset:  #252219;
+      --color-surface-offset-2:#2B271E;
+      --color-surface-dark:    #0E0C0A;
+      --color-divider:         #2A2822;
+      --color-border:          oklch(from #F4F0E6 l c h / 0.09);
+      --color-text:            #E8E4DA;
+      --color-text-muted:      #8A857E;
+      --color-text-faint:      #6D6860;
+      --color-text-inverse:    #E8E4DA;
+      --color-accent:          #7B9EC7;
+      --color-accent-hover:    #9BB5D4;
+      --color-brown:           #C4895A;
+      --color-gold:            #E8B050;
+      --shadow-sm: 0 1px 3px oklch(0 0 0 / 0.25);
+      --shadow-md: 0 4px 16px oklch(0 0 0 / 0.35);
+      --shadow-lg: 0 12px 40px oklch(0 0 0 / 0.45);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme]) {
+        --color-bg: #141210; --color-surface: #1A1814; --color-surface-2: #1F1D18;
+        --color-surface-offset: #252219; --color-surface-dark: #0E0C0A;
+        --color-divider: #2A2822; --color-border: oklch(from #F4F0E6 l c h / 0.09);
+        --color-text: #E8E4DA; --color-text-muted: #8A857E;
+        --color-text-faint: #6D6860; --color-text-inverse: #E8E4DA;
+        --color-accent: #7B9EC7; --color-accent-hover: #9BB5D4;
+        --color-brown: #C4895A; --color-gold: #E8B050;
+        --shadow-sm: 0 1px 3px oklch(0 0 0 / 0.25);
+        --shadow-md: 0 4px 16px oklch(0 0 0 / 0.35);
+        --shadow-lg: 0 12px 40px oklch(0 0 0 / 0.45);
+      }
+    }
+
+    /* ─── Reset ─── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      scroll-behavior: smooth;
+      scroll-padding-top: 5rem;
+    }
+    body {
+      min-height: 100dvh;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.6;
+    }
+    img { display: block; max-width: 100%; height: auto; background: var(--color-surface-offset); }
+    ul[role="list"] { list-style: none; }
+    input, button, select { font: inherit; color: inherit; }
+    h1,h2,h3,h4 { text-wrap: balance; line-height: 1.15; font-family: var(--font-display); }
+    p, li { text-wrap: pretty; }
+    button { cursor: pointer; background: none; border: none; }
+    a { color: inherit; }
+    ::selection { background: oklch(from var(--color-accent) l c h / 0.18); color: var(--color-text); }
+    :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; border-radius: var(--radius-sm); }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0;
+    }
+
+    /* ─── Skip link ─── */
+    .skip-link {
+      position: absolute; top: var(--space-4); left: var(--space-4);
+      background: var(--color-accent); color: var(--color-text-inverse);
+      padding: var(--space-2) var(--space-4); border-radius: var(--radius-md);
+      font-size: var(--text-sm); font-weight: 500; text-decoration: none; z-index: 9999;
+      transform: translateY(-200%); transition: transform var(--transition);
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    /* ─────────────────────────────────────────
+       NAV
+    ───────────────────────────────────────── */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: color-mix(in oklch, var(--color-bg) 92%, transparent);
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .nav-inner {
+      max-width: var(--content-wide); margin-inline: auto;
+      padding-inline: var(--space-6); height: 4rem;
+      display: flex; align-items: center; justify-content: space-between; gap: var(--space-8);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: var(--space-3);
+      text-decoration: none; color: var(--color-text); flex-shrink: 0;
+    }
+    .nav-logo-mark svg { width: 36px; height: 36px; }
+    .nav-logo-text { line-height: 1.1; }
+    .nav-logo-name {
+      display: block; font-family: var(--font-display); font-size: 1.15rem;
+      font-weight: 500; letter-spacing: 0.03em; color: var(--color-text);
+    }
+    .nav-logo-tagline {
+      display: block; font-size: var(--text-xs); letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--color-text-muted); font-weight: 400;
+    }
+    .nav-links { display: flex; align-items: center; list-style: none; gap: var(--space-1); }
+    .nav-item { position: relative; }
+    .nav-link {
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: var(--space-2) var(--space-3);
+      font-family: var(--font-body); font-size: var(--text-sm); font-weight: 500;
+      letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none;
+      color: var(--color-text-muted); border-radius: var(--radius-md); white-space: nowrap;
+      transition: color var(--transition), background var(--transition);
+    }
+    .nav-link:hover, .nav-link.active { color: var(--color-text); background: var(--color-surface-offset); }
+    .nav-link.active { color: var(--color-accent); }
+    .nav-chevron { width: 12px; height: 12px; transition: transform var(--transition); }
+    .nav-item:hover .nav-chevron, .nav-item:focus-within .nav-chevron { transform: rotate(180deg); }
+    .nav-dropdown {
+      position: absolute; top: calc(100% + var(--space-2)); left: 50%;
+      transform: translateX(-50%) translateY(-6px);
+      min-width: 210px; background: var(--color-surface-2);
+      border: 1px solid var(--color-border); border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg); padding: var(--space-2); list-style: none;
+      opacity: 0; visibility: hidden;
+      transition: opacity var(--transition), visibility var(--transition), transform var(--transition);
+      pointer-events: none;
+    }
+    .nav-item:hover .nav-dropdown, .nav-item:focus-within .nav-dropdown {
+      opacity: 1; visibility: visible;
+      transform: translateX(-50%) translateY(0); pointer-events: auto;
+    }
+    .nav-dropdown a {
+      display: block; padding: var(--space-2) var(--space-3);
+      font-size: var(--text-sm); font-weight: 400; text-decoration: none;
+      color: var(--color-text-muted); border-radius: var(--radius-md);
+      transition: color var(--transition), background var(--transition);
+    }
+    .nav-dropdown a:hover { color: var(--color-text); background: var(--color-surface-offset); }
+    .nav-right { display: flex; align-items: center; gap: var(--space-3); }
+    .theme-toggle {
+      display: flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px; border-radius: var(--radius-md);
+      color: var(--color-text-muted);
+      transition: color var(--transition), background var(--transition);
+    }
+    .theme-toggle:hover { color: var(--color-text); background: var(--color-surface-offset); }
+    .nav-hamburger {
+      display: none; flex-direction: column; justify-content: center; align-items: center;
+      gap: 5px; width: 40px; height: 40px; padding: var(--space-2);
+      border-radius: var(--radius-md);
+      transition: background var(--transition);
+    }
+    .nav-hamburger:hover { background: var(--color-surface-offset); }
+    .nav-hamburger span {
+      display: block; width: 20px; height: 1.5px; background: var(--color-text);
+      border-radius: 2px; transition: transform var(--transition), opacity var(--transition);
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    /* Mobile nav */
+    .nav-mobile {
+      position: fixed; inset: 0; top: 4rem; z-index: 99;
+      background: var(--color-surface-2);
+      padding: var(--space-6); display: none; flex-direction: column;
+      overflow-y: auto;
+    }
+    .nav-mobile.open { display: flex; }
+    .nav-mobile-links { list-style: none; display: flex; flex-direction: column; gap: var(--space-2); }
+    .nav-mobile-links > li > a {
+      display: block; padding: var(--space-3) var(--space-4);
+      font-size: var(--text-base); font-weight: 500; letter-spacing: 0.04em;
+      text-transform: uppercase; text-decoration: none; color: var(--color-text);
+      border-radius: var(--radius-md);
+      transition: background var(--transition);
+    }
+    .nav-mobile-links > li > a:hover { background: var(--color-surface-offset); }
+    .nav-mobile-sub { list-style: none; padding-left: var(--space-4); margin-top: var(--space-1); display: flex; flex-direction: column; gap: var(--space-1); }
+    .nav-mobile-sub a {
+      display: block; padding: var(--space-2) var(--space-3);
+      font-size: var(--text-sm); color: var(--color-text-muted); text-decoration: none;
+      border-radius: var(--radius-md); transition: color var(--transition), background var(--transition);
+    }
+    .nav-mobile-sub a:hover { color: var(--color-text); background: var(--color-surface-offset); }
+
+    @media (max-width: 860px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+    }
+
+    /* ─────────────────────────────────────────
+       SCROLL REVEAL
+    ───────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ─────────────────────────────────────────
+       HERO
+    ───────────────────────────────────────── */
+    .hero {
+      padding-block: clamp(var(--space-16), 10vw, var(--space-24));
+      border-bottom: 1px solid var(--color-divider);
+    }
+    .hero-inner {
+      max-width: var(--content-wide); margin-inline: auto;
+      padding-inline: var(--space-6);
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(var(--space-8), 5vw, var(--space-16));
+      align-items: end;
+    }
+    .hero-eyebrow {
+      font-family: var(--font-body); font-size: var(--text-xs); font-weight: 500;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--color-gold); margin-bottom: var(--space-4);
+    }
+    .hero-left h1 {
+      font-size: var(--text-3xl); font-weight: 400; color: var(--color-text);
+    }
+    .hero-left h1 em { font-style: italic; color: var(--color-accent); }
+    .hero-right { display: flex; flex-direction: column; gap: var(--space-8); padding-bottom: var(--space-2); }
+    .hero-intro {
+      font-size: var(--text-lg); font-weight: 300; color: var(--color-text-muted);
+      line-height: 1.7; max-width: 52ch;
+    }
+    .hero-stats { display: flex; gap: var(--space-8); }
+    .hero-stat {}
+    .hero-stat-num {
+      display: block; font-family: var(--font-display); font-size: var(--text-xl);
+      font-weight: 500; color: var(--color-text); line-height: 1;
+    }
+    .hero-stat-label {
+      display: block; font-size: var(--text-xs); letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--color-text-faint); margin-top: var(--space-1);
+    }
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; gap: var(--space-8); }
+      .hero-right { padding-bottom: 0; }
+    }
+
+    /* ─────────────────────────────────────────
+       PROMISE SECTION (Initiative 1)
+    ───────────────────────────────────────── */
+    .promise-section {
+      padding-block: clamp(var(--space-16), 10vw, var(--space-24));
+    }
+    .promise-inner {
+      max-width: var(--content-wide); margin-inline: auto;
+      padding-inline: var(--space-6);
+    }
+    .promise-header {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(var(--space-8), 5vw, var(--space-16));
+      align-items: start;
+      padding-bottom: clamp(var(--space-12), 6vw, var(--space-20));
+      border-bottom: 1px solid var(--color-divider);
+      margin-bottom: clamp(var(--space-12), 6vw, var(--space-20));
+    }
+    .promise-label {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      font-size: var(--text-xs); font-weight: 500; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--color-gold);
+      margin-bottom: var(--space-5);
+    }
+    .promise-label span {
+      display: inline-block; width: 28px; height: 1px; background: var(--color-gold);
+    }
+    .promise-header h2 {
+      font-size: var(--text-2xl); font-weight: 400;
+    }
+    .promise-header h2 em { font-style: italic; color: var(--color-accent); }
+    .promise-header-right { padding-top: var(--space-4); }
+    .promise-header-right p {
+      font-size: var(--text-base); color: var(--color-text-muted);
+      line-height: 1.75; max-width: 52ch; margin-bottom: var(--space-5);
+    }
+    .promise-badge {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      padding: var(--space-2) var(--space-4);
+      background: var(--color-surface-offset);
+      border: 1px solid var(--color-divider);
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs); font-weight: 500;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--color-text-muted);
+    }
+    .promise-badge-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--color-gold); flex-shrink: 0;
+    }
+
+    /* Subjects grid */
+    .subjects-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-4);
+    }
+    .subject-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      transition: box-shadow var(--transition), background var(--transition);
+    }
+    .subject-card:hover { background: var(--color-surface-2); box-shadow: var(--shadow-md); }
+    .subject-num {
+      font-family: var(--font-display); font-size: var(--text-xl); font-weight: 300;
+      color: var(--color-text-faint); line-height: 1; margin-bottom: var(--space-4);
+    }
+    .subject-card h3 {
+      font-family: var(--font-display); font-size: var(--text-lg); font-weight: 500;
+      margin-bottom: var(--space-3);
+    }
+    .subject-card p { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.65; }
+
+    /* Promise narrative */
+    .promise-story {
+      display: grid; grid-template-columns: 5fr 4fr;
+      gap: clamp(var(--space-10), 6vw, var(--space-20));
+      align-items: center;
+      padding-top: clamp(var(--space-12), 6vw, var(--space-20));
+    }
+    .promise-story-text {}
+    .promise-story-text h3 {
+      font-size: var(--text-xl); font-weight: 400; margin-bottom: var(--space-6);
+    }
+    .promise-story-text h3 em { font-style: italic; color: var(--color-accent); }
+    .promise-story-text p {
+      font-size: var(--text-base); color: var(--color-text-muted);
+      line-height: 1.8; max-width: 58ch; margin-bottom: var(--space-5);
+    }
+    .promise-story-text p:last-child { margin-bottom: 0; }
+    .promise-image-wrap {
+      position: relative; border-radius: var(--radius-xl); overflow: hidden;
+    }
+    .promise-image-wrap img {
+      width: 100%; height: 440px; object-fit: cover; display: block;
+      border-radius: var(--radius-xl);
+    }
+    .promise-image-caption {
+      position: absolute; bottom: var(--space-4); left: var(--space-4);
+      font-size: var(--text-xs); letter-spacing: 0.10em; text-transform: uppercase;
+      color: rgba(244, 240, 230, 0.75); font-weight: 400;
+    }
+
+    @media (max-width: 900px) {
+      .promise-header { grid-template-columns: 1fr; }
+      .subjects-grid { grid-template-columns: 1fr 1fr; }
+      .promise-story { grid-template-columns: 1fr; }
+      .promise-story-text { order: 2; }
+      .promise-image-wrap { order: 1; }
+      .promise-image-wrap img { height: 280px; }
+    }
+    @media (max-width: 560px) {
+      .subjects-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ─────────────────────────────────────────
+       DRIVES SECTION (Initiative 2)
+    ───────────────────────────────────────── */
+    .drives-section {
+      background: var(--color-surface-dark);
+      padding-block: clamp(var(--space-16), 10vw, var(--space-24));
+    }
+    [data-theme="dark"] .drives-section {
+      background: var(--color-surface-offset);
+    }
+    .drives-inner {
+      max-width: var(--content-wide); margin-inline: auto;
+      padding-inline: var(--space-6);
+    }
+    .drives-top {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: clamp(var(--space-8), 5vw, var(--space-16));
+      align-items: end;
+      margin-bottom: clamp(var(--space-12), 6vw, var(--space-20));
+    }
+    .drives-label {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      font-size: var(--text-xs); font-weight: 500; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--color-gold);
+      margin-bottom: var(--space-5);
+    }
+    .drives-label span { display: inline-block; width: 28px; height: 1px; background: var(--color-gold); }
+    .drives-top h2 {
+      font-size: var(--text-2xl); font-weight: 400; color: var(--color-text-inverse);
+    }
+    .drives-top h2 em { font-style: italic; color: var(--color-gold); }
+    [data-theme="dark"] .drives-top h2 { color: var(--color-text); }
+    [data-theme="dark"] .drives-top h2 em { color: var(--color-gold); }
+    .drives-intro p {
+      font-size: var(--text-base); color: oklch(from #F4F0E6 l c h / 0.65);
+      line-height: 1.8; max-width: 52ch; margin-bottom: var(--space-5);
+    }
+    [data-theme="dark"] .drives-intro p { color: var(--color-text-muted); }
+
+    /* Drive cards */
+    .drives-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: var(--space-4);
+    }
+    .drive-card {
+      background: oklch(from #F4F0E6 l c h / 0.06);
+      border: 1px solid oklch(from #F4F0E6 l c h / 0.12);
+      border-radius: var(--radius-xl); overflow: hidden;
+      transition: background var(--transition), border-color var(--transition);
+    }
+    .drive-card:hover { background: oklch(from #F4F0E6 l c h / 0.10); border-color: oklch(from #F4F0E6 l c h / 0.20); }
+    [data-theme="dark"] .drive-card { background: var(--color-surface); border-color: var(--color-border); }
+    [data-theme="dark"] .drive-card:hover { background: var(--color-surface-2); box-shadow: var(--shadow-md); }
+    .drive-card-image { aspect-ratio: 16/9; overflow: hidden; }
+    .drive-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .drive-card:hover .drive-card-image img { transform: scale(1.03); }
+    .drive-card-body { padding: var(--space-6); }
+    .drive-tag {
+      display: inline-block; margin-bottom: var(--space-3);
+      font-size: var(--text-xs); font-weight: 500; letter-spacing: 0.10em;
+      text-transform: uppercase; color: var(--color-gold);
+    }
+    .drive-card h3 {
+      font-family: var(--font-display); font-size: var(--text-lg); font-weight: 500;
+      color: var(--color-text-inverse); margin-bottom: var(--space-3);
+    }
+    [data-theme="dark"] .drive-card h3 { color: var(--color-text); }
+    .drive-card p { font-size: var(--text-sm); color: oklch(from #F4F0E6 l c h / 0.55); line-height: 1.7; }
+    [data-theme="dark"] .drive-card p { color: var(--color-text-muted); }
+    .drive-card-items { margin-top: var(--space-4); display: flex; flex-wrap: wrap; gap: var(--space-2); }
+    .drive-item {
+      display: inline-flex; align-items: center; gap: var(--space-2);
+      padding: var(--space-1) var(--space-3);
+      background: oklch(from #F4F0E6 l c h / 0.08);
+      border: 1px solid oklch(from #F4F0E6 l c h / 0.14);
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs); color: oklch(from #F4F0E6 l c h / 0.60);
+      font-weight: 400; letter-spacing: 0.04em;
+    }
+    [data-theme="dark"] .drive-item {
+      background: var(--color-surface-offset); border-color: var(--color-border);
+      color: var(--color-text-muted);
+    }
+
+    @media (max-width: 768px) {
+      .drives-top { grid-template-columns: 1fr; }
+      .drives-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ─────────────────────────────────────────
+       IMPACT STRIP
+    ───────────────────────────────────────── */
+    .impact-strip {
+      padding-block: clamp(var(--space-12), 6vw, var(--space-20));
+      border-top: 1px solid var(--color-divider);
+      border-bottom: 1px solid var(--color-divider);
+    }
+    .impact-strip-inner {
+      max-width: var(--content-wide); margin-inline: auto;
+      padding-inline: var(--space-6);
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-8);
+      text-align: center;
+    }
+    .impact-item {}
+    .impact-num {
+      font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 400;
+      color: var(--color-accent); line-height: 1; margin-bottom: var(--space-2);
+    }
+    .impact-label {
+      font-size: var(--text-xs); letter-spacing: 0.10em; text-transform: uppercase;
+      color: var(--color-text-muted); font-weight: 500;
+    }
+    @media (max-width: 640px) {
+      .impact-strip-inner { grid-template-columns: 1fr 1fr; gap: var(--space-8) var(--space-6); }
+    }
+
+    /* ─────────────────────────────────────────
+       HOW TO HELP / CTA
+    ───────────────────────────────────────── */
+    .cta-section {
+      padding-block: clamp(var(--space-16), 10vw, var(--space-24));
+      overflow: hidden; position: relative;
+    }
+    .cta-bg {
+      position: absolute; inset: 0; z-index: 0;
+    }
+    .cta-bg img {
+      width: 100%; height: 100%; object-fit: cover; opacity: 0.10;
+    }
+    [data-theme="dark"] .cta-bg img { opacity: 0.06; }
+    .cta-body {
+      position: relative; z-index: 1;
+      max-width: var(--content-default); margin-inline: auto;
+      padding-inline: var(--space-6);
+      text-align: center;
+    }
+    .cta-eyebrow {
+      font-size: var(--text-xs); font-weight: 500; letter-spacing: 0.16em;
+      text-transform: uppercase; color: var(--color-gold);
+      margin-bottom: var(--space-5);
+    }
+    .cta-body h2 {
+      font-size: var(--text-2xl); font-weight: 400; margin-bottom: var(--space-6);
+    }
+    .cta-body h2 em { font-style: italic; color: var(--color-accent); }
+    .cta-body p {
+      font-size: var(--text-base); color: var(--color-text-muted);
+      line-height: 1.8; max-width: 56ch; margin-inline: auto;
+      margin-bottom: var(--space-10);
+    }
+    .cta-cards {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-4); text-align: left;
+    }
+    .cta-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+    }
+    .cta-card-icon {
+      width: 40px; height: 40px; margin-bottom: var(--space-4);
+      color: var(--color-accent);
+    }
+    .cta-card h3 {
+      font-family: var(--font-display); font-size: var(--text-lg); font-weight: 500;
+      margin-bottom: var(--space-3);
+    }
+    .cta-card p { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.65; }
+    @media (max-width: 768px) {
+      .cta-cards { grid-template-columns: 1fr; }
+    }
+
+    /* ─────────────────────────────────────────
+       FOOTER
+    ───────────────────────────────────────── */
+    footer {
+      background: var(--color-surface-dark);
+      color: oklch(from #F4F0E6 l c h / 0.55);
+    }
+    [data-theme="dark"] footer {
+      background: var(--color-surface-offset-2);
+    }
+    .footer-inner { max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6); }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: var(--space-12); padding-block: var(--space-16);
+    }
+    .footer-logo { display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4); text-decoration: none; }
+    .footer-logo svg { width: 32px; height: 32px; color: var(--color-text-inverse); }
+    [data-theme="dark"] .footer-logo svg { color: var(--color-text); }
+    .footer-logo-name {
+      font-family: var(--font-display); font-size: 1.1rem; font-weight: 500;
+      color: var(--color-text-inverse); letter-spacing: 0.02em;
+    }
+    [data-theme="dark"] .footer-logo-name { color: var(--color-text); }
+    .footer-brand p { font-size: var(--text-sm); line-height: 1.7; max-width: 34ch; }
+    .footer-nav-group h4 {
+      font-family: var(--font-body); font-size: var(--text-xs); font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--color-text-inverse); margin-bottom: var(--space-5);
+    }
+    [data-theme="dark"] .footer-nav-group h4 { color: var(--color-text); }
+    .footer-nav-group ul { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); }
+    .footer-nav-group a {
+      font-size: var(--text-sm); color: oklch(from #F4F0E6 l c h / 0.50);
+      text-decoration: none; transition: color var(--transition);
+    }
+    [data-theme="dark"] .footer-nav-group a { color: var(--color-text-muted); }
+    .footer-nav-group a:hover { color: var(--color-text-inverse); }
+    [data-theme="dark"] .footer-nav-group a:hover { color: var(--color-text); }
+    .footer-bottom {
+      border-top: 1px solid oklch(from #F4F0E6 l c h / 0.10);
+      padding-block: var(--space-6);
+      display: flex; justify-content: space-between; align-items: center; gap: var(--space-4); flex-wrap: wrap;
+    }
+    [data-theme="dark"] .footer-bottom { border-top-color: var(--color-divider); }
+    .footer-bottom p { font-size: var(--text-xs); }
+    .footer-social { display: flex; gap: var(--space-3); }
+    .footer-social a {
+      display: flex; align-items: center; justify-content: center;
+      width: 34px; height: 34px; border-radius: var(--radius-md);
+      color: oklch(from #F4F0E6 l c h / 0.45);
+      border: 1px solid oklch(from #F4F0E6 l c h / 0.12);
+      text-decoration: none; transition: color var(--transition), border-color var(--transition), background var(--transition);
+    }
+    [data-theme="dark"] .footer-social a { color: var(--color-text-muted); border-color: var(--color-border); }
+    .footer-social a:hover { color: var(--color-text-inverse); border-color: oklch(from #F4F0E6 l c h / 0.30); background: oklch(from #F4F0E6 l c h / 0.08); }
+    [data-theme="dark"] .footer-social a:hover { color: var(--color-text); background: var(--color-surface-offset); }
+
+    @media (max-width: 900px) {
+      .footer-top { grid-template-columns: 1fr 1fr; gap: var(--space-8); }
+    }
+    @media (max-width: 480px) {
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════
+       NAV
+  ═══════════════════════════════ -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Hafez Foundation home">
+        <div class="nav-logo-mark">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" color="var(--color-text)">
+            <rect x="1" y="1" width="34" height="34" rx="4" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+            <path d="M18 6 L18 30 M8 18 L28 18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            <circle cx="18" cy="18" r="5" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="18" cy="18" r="2" fill="currentColor" opacity="0.5"/>
+            <path d="M10.5 10.5 L25.5 25.5 M25.5 10.5 L10.5 25.5" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" opacity="0.35"/>
+          </svg>
+        </div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Hafez Foundation</span>
+          <span class="nav-logo-tagline">Heritage · Art · Dialogue</span>
+        </div>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a href="initiatives.html" class="nav-link active" aria-current="page">
+            What We Do
+            <svg class="nav-chevron" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg>
+          </a>
+          <ul class="nav-dropdown" role="list">
+            <li><a href="initiatives.html#education">Education &amp; Tutoring</a></li>
+            <li><a href="initiatives.html#drives">Community Drives</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="articles.html" class="nav-link">
+            Articles &amp; Publications
+            <svg class="nav-chevron" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M2 3.5l3 3 3-3"/></svg>
+          </a>
+          <ul class="nav-dropdown" role="list">
+            <li><a href="articles.html#featured">Featured Articles</a></li>
+            <li><a href="articles.html#east-west">Bridging East &amp; West</a></li>
+            <li><a href="articles.html#commentary">Cultural Commentary</a></li>
+            <li><a href="articles.html#external">External Publications</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle color theme"></button>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Mobile navigation">
+    <ul class="nav-mobile-links" role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li>
+        <a href="initiatives.html">What We Do</a>
+        <ul class="nav-mobile-sub" role="list">
+          <li><a href="initiatives.html#education">Education &amp; Tutoring</a></li>
+          <li><a href="initiatives.html#drives">Community Drives</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="articles.html">Articles &amp; Publications</a>
+        <ul class="nav-mobile-sub" role="list">
+          <li><a href="articles.html#featured">Featured Articles</a></li>
+          <li><a href="articles.html#east-west">Bridging East &amp; West</a></li>
+          <li><a href="articles.html#commentary">Cultural Commentary</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ── HERO ── -->
+    <section class="hero" aria-label="Our initiatives">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <p class="hero-eyebrow reveal">Active Initiatives</p>
+          <h1 class="reveal reveal-delay-1">Action is how a <em>promise becomes real.</em></h1>
+        </div>
+        <div class="hero-right">
+          <p class="hero-intro reveal reveal-delay-2">
+            The Hafez Foundation's work lives in two active commitments: tutoring young refugees as they build new lives in a new language, and running drives that put the tools of learning into the hands of those who need them most.
+          </p>
+          <div class="hero-stats reveal reveal-delay-3">
+            <div class="hero-stat">
+              <span class="hero-stat-num">2</span>
+              <span class="hero-stat-label">Active Initiatives</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-num">Youth</span>
+              <span class="hero-stat-label">Primary Focus</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-num">Ongoing</span>
+              <span class="hero-stat-label">Year-Round</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── INITIATIVE 1: KEEPING OUR PROMISE ── -->
+    <section id="education" class="promise-section" aria-label="Keeping Our Promise initiative">
+      <div class="promise-inner">
+
+        <div class="promise-header">
+          <div>
+            <p class="promise-label reveal"><span></span> Initiative One</p>
+            <h2 class="reveal reveal-delay-1">Keeping Our <em>Promise.</em></h2>
+          </div>
+          <div class="promise-header-right">
+            <p class="reveal reveal-delay-1">
+              We made a commitment to young people displaced from war — that education wouldn't stop at the border. Through structured, one-on-one and small-group tutoring, we give refugee youth the academic foundations they need to move forward with confidence.
+            </p>
+            <p class="reveal reveal-delay-2">
+              Our volunteers work directly with students on the subjects that matter most for integration, academic progress, and future opportunity — meeting them where they are, not where a curriculum says they should be.
+            </p>
+            <span class="promise-badge reveal reveal-delay-3">
+              <span class="promise-badge-dot"></span>
+              Active &amp; Accepting Students
+            </span>
+          </div>
+        </div>
+
+        <!-- Subjects taught -->
+        <div class="subjects-grid">
+          <div class="subject-card reveal">
+            <div class="subject-num">01</div>
+            <h3>English Language</h3>
+            <p>Reading, writing, speaking, and listening — for students at every level, from basic literacy to academic fluency. Language is the first door we open.</p>
+          </div>
+          <div class="subject-card reveal reveal-delay-1">
+            <div class="subject-num">02</div>
+            <h3>Mathematics</h3>
+            <p>From foundational arithmetic to algebra and beyond. We build numeracy skills that translate across school systems and open doors to further study.</p>
+          </div>
+          <div class="subject-card reveal reveal-delay-2">
+            <div class="subject-num">03</div>
+            <h3>Academic Support</h3>
+            <p>Homework help, test preparation, and study skills for students already enrolled in school — so they can keep up, catch up, and get ahead.</p>
+          </div>
+        </div>
+
+        <!-- Narrative -->
+        <div class="promise-story">
+          <div class="promise-story-text">
+            <h3 class="reveal">Education as a form of <em>keeping faith.</em></h3>
+            <p class="reveal reveal-delay-1">
+              Many of the students we work with have experienced interruptions to their schooling that no child should face. Some have spent years in displacement before arriving here. Others arrived mid-school-year, dropped into classrooms where the language and curriculum were entirely unfamiliar.
+            </p>
+            <p class="reveal reveal-delay-2">
+              Our tutors — many of whom share cultural backgrounds with the students they serve — don't just teach subjects. They build trust. They show up consistently, which is itself a message: you belong here, and your education matters.
+            </p>
+            <p class="reveal reveal-delay-3">
+              The name "Keeping Our Promise" is deliberate. It reflects our belief that society owes these young people a real chance — and that we, as a foundation, are accountable to delivering on it.
+            </p>
+          </div>
+          <div class="promise-image-wrap reveal reveal-delay-2">
+            <img
+              src="https://picsum.photos/seed/tutoring-students/600/440"
+              alt="A student working through exercises at a desk with a tutor nearby"
+              width="600" height="440" loading="lazy" decoding="async"
+            />
+            <span class="promise-image-caption">One session at a time</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── IMPACT NUMBERS ── -->
+    <div class="impact-strip" aria-label="Our impact in numbers">
+      <div class="impact-strip-inner">
+        <div class="impact-item reveal">
+          <div class="impact-num">Weekly</div>
+          <div class="impact-label">Tutoring Sessions</div>
+        </div>
+        <div class="impact-item reveal reveal-delay-1">
+          <div class="impact-num">1-on-1</div>
+          <div class="impact-label">Personalised Support</div>
+        </div>
+        <div class="impact-item reveal reveal-delay-2">
+          <div class="impact-num">English + Math</div>
+          <div class="impact-label">Core Subjects</div>
+        </div>
+        <div class="impact-item reveal reveal-delay-3">
+          <div class="impact-num">Ongoing</div>
+          <div class="impact-label">Year-Round Programme</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── INITIATIVE 2: COMMUNITY DRIVES ── -->
+    <section id="drives" class="drives-section" aria-label="Community drives">
+      <div class="drives-inner">
+
+        <div class="drives-top">
+          <div>
+            <p class="drives-label reveal"><span></span> Initiative Two</p>
+            <h2 class="reveal reveal-delay-1">The tools of learning <em>belong to everyone.</em></h2>
+          </div>
+          <div class="drives-intro">
+            <p class="reveal reveal-delay-1">
+              Knowledge needs infrastructure. Our community drives collect and distribute the physical resources that make learning possible — ensuring no student is held back by what they don't have.
+            </p>
+            <p class="reveal reveal-delay-2">
+              Each drive is organised around a specific need and delivered directly to families and students in our community. No waiting lists, no bureaucracy — just resources in the right hands.
+            </p>
+          </div>
+        </div>
+
+        <div class="drives-grid">
+          <div class="drive-card reveal">
+            <div class="drive-card-image">
+              <img
+                src="https://picsum.photos/seed/computers-tech-donation/700/394"
+                alt="Refurbished laptops and computers being prepared for distribution"
+                width="700" height="394" loading="lazy" decoding="async"
+              />
+            </div>
+            <div class="drive-card-body">
+              <span class="drive-tag">Technology</span>
+              <h3>Computer &amp; Device Drives</h3>
+              <p>Refurbished laptops, tablets, and devices collected and distributed to students who need them for schoolwork, online learning, and digital literacy.</p>
+              <div class="drive-card-items">
+                <span class="drive-item">Laptops</span>
+                <span class="drive-item">Tablets</span>
+                <span class="drive-item">Charging equipment</span>
+              </div>
+            </div>
+          </div>
+          <div class="drive-card reveal reveal-delay-1">
+            <div class="drive-card-image">
+              <img
+                src="https://picsum.photos/seed/books-library-shelves/700/394"
+                alt="Stacks of books sorted and ready for distribution to students"
+                width="700" height="394" loading="lazy" decoding="async"
+              />
+            </div>
+            <div class="drive-card-body">
+              <span class="drive-tag">Literacy</span>
+              <h3>Book &amp; Materials Drives</h3>
+              <p>Textbooks, workbooks, stationery, and reading books for students of all ages — supporting both classroom learning and independent reading at home.</p>
+              <div class="drive-card-items">
+                <span class="drive-item">Textbooks</span>
+                <span class="drive-item">Workbooks</span>
+                <span class="drive-item">Stationery</span>
+                <span class="drive-item">Reading books</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── HOW YOU CAN HELP ── -->
+    <section class="cta-section" aria-label="Get involved">
+      <div class="cta-bg" aria-hidden="true">
+        <img
+          src="https://picsum.photos/seed/islamic-arch-texture/1400/600"
+          alt=""
+          width="1400" height="600" loading="lazy" decoding="async"
+        />
+      </div>
+      <div class="cta-body">
+        <p class="cta-eyebrow reveal">Get Involved</p>
+        <h2 class="reveal reveal-delay-1">Every commitment <em>keeps the promise.</em></h2>
+        <p class="reveal reveal-delay-2">
+          Both initiatives run on the dedication of volunteers and the generosity of donors. Whether you have time, resources, or skills to offer, there is a meaningful role for you.
+        </p>
+        <div class="cta-cards reveal reveal-delay-2">
+          <div class="cta-card">
+            <svg class="cta-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+            </svg>
+            <h3>Volunteer as a Tutor</h3>
+            <p>Share your knowledge in English, mathematics, or any subject you're confident in. Flexible hours, meaningful impact.</p>
+          </div>
+          <div class="cta-card">
+            <svg class="cta-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8M12 17v4"/>
+            </svg>
+            <h3>Donate Devices or Books</h3>
+            <p>Got a laptop, tablet, or books you no longer need? Donate them to our next drive and put them back into active use.</p>
+          </div>
+          <div class="cta-card">
+            <svg class="cta-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            <h3>Spread the Word</h3>
+            <p>Help us reach more volunteers, donors, and students by sharing our work within your community and networks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════
+       FOOTER
+  ═══════════════════════════════ -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Hafez Foundation home">
+            <svg width="32" height="32" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="1" y="1" width="34" height="34" rx="4" stroke="currentColor" stroke-width="1.2" opacity="0.4"/>
+              <path d="M18 6 L18 30 M8 18 L28 18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <circle cx="18" cy="18" r="5" stroke="currentColor" stroke-width="1.2"/>
+              <circle cx="18" cy="18" r="2" fill="currentColor" opacity="0.5"/>
+              <path d="M10.5 10.5 L25.5 25.5 M25.5 10.5 L10.5 25.5" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" opacity="0.35"/>
+            </svg>
+            <span class="footer-logo-name">Hafez Foundation</span>
+          </a>
+          <p>Bridging East and West through heritage, art, and understanding.</p>
+        </div>
+
+        <nav class="footer-nav-group" aria-label="Site navigation">
+          <h4>Navigate</h4>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="initiatives.html">What We Do</a></li>
+            <li><a href="articles.html">Articles</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav-group" aria-label="Publications navigation">
+          <h4>Publications</h4>
+          <ul role="list">
+            <li><a href="articles.html#featured">Featured Articles</a></li>
+            <li><a href="articles.html#east-west">Bridging East &amp; West</a></li>
+            <li><a href="articles.html#commentary">Cultural Commentary</a></li>
+            <li><a href="articles.html#external">External Publications</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav-group" aria-label="Initiatives navigation">
+          <h4>Initiatives</h4>
+          <ul role="list">
+            <li><a href="initiatives.html#education">Keeping Our Promise</a></li>
+            <li><a href="initiatives.html#drives">Community Drives</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="footer-year"></span> Hafez Foundation. All rights reserved.</p>
+        <div class="footer-social" aria-label="Social media links">
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="X / Twitter" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.738l7.73-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var html = document.documentElement;
+      var SUN = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+      var MOON = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+
+      var mq = window.matchMedia('(prefers-color-scheme: dark)');
+      var theme = mq.matches ? 'dark' : 'light';
+      html.setAttribute('data-theme', theme);
+
+      function applyTheme() {
+        document.querySelectorAll('[data-theme-toggle]').forEach(function(btn) {
+          btn.innerHTML = theme === 'dark' ? SUN : MOON;
+          btn.setAttribute('aria-label', 'Switch to ' + (theme === 'dark' ? 'light' : 'dark') + ' mode');
+        });
+      }
+      applyTheme();
+
+      document.querySelectorAll('[data-theme-toggle]').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          theme = theme === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', theme);
+          applyTheme();
+        });
+      });
+
+      document.addEventListener('DOMContentLoaded', function () {
+        // Footer year
+        var yr = document.getElementById('footer-year');
+        if (yr) { yr.textContent = new Date().getFullYear(); }
+
+        // Mobile nav
+        var hamburger = document.getElementById('nav-hamburger');
+        var mobileNav = document.getElementById('nav-mobile');
+        if (hamburger && mobileNav) {
+          hamburger.addEventListener('click', function () {
+            var open = mobileNav.classList.toggle('open');
+            hamburger.classList.toggle('open', open);
+            hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+          });
+          document.addEventListener('click', function (e) {
+            if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
+              mobileNav.classList.remove('open');
+              hamburger.classList.remove('open');
+              hamburger.setAttribute('aria-expanded', 'false');
+            }
+          });
+        }
+
+        // Scroll reveal
+        var reveals = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window) {
+          var observer = new IntersectionObserver(
+            function(entries) {
+              entries.forEach(function(e) {
+                if (e.isIntersecting) {
+                  e.target.classList.add('visible');
+                  observer.unobserve(e.target);
+                }
+              });
+            },
+            { threshold: 0.10 }
+          );
+          reveals.forEach(function(el) { observer.observe(el); });
+        } else {
+          reveals.forEach(function(el) { el.classList.add('visible'); });
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
